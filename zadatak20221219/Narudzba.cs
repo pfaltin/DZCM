@@ -15,19 +15,21 @@ namespace zadatak20221219
 {
     internal class Narudzba
     {
-        public Narudzba(int v, DateTime now)
+        public Narudzba(int BrojNarudzbe, DateTime DatumNarudzbe)
         {
-            V = v;
-            Now = now;
+            OrderNo = BrojNarudzbe;
+            orderDate = DatumNarudzbe;
         }
 
-        public int V { get; }
-        public DateTime Now { get; }
+        public int OrderNo { get; }
+        public DateTime orderDate { get; }
         public Kupac Kupac { get; internal set; }
+
+        private List<StavkaNarudzbe> stavkaNarudzbe = new List<StavkaNarudzbe>();
 
         internal void IspisNarudzbe()
         {
-            throw new NotImplementedException();
+
         }
 
         internal void KreirajStavkuNarudzbe(int v1, string v2, int v3, decimal v4)
