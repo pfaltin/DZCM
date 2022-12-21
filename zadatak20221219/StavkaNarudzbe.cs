@@ -35,12 +35,12 @@ namespace zadatak20221219
         public int KolicinaStavke1 { get => KolicinaStavke; set => KolicinaStavke = value; }
         public decimal CijenaStavke1 { get => CijenaStavke; set => CijenaStavke = value; }
 
-        public void KreiraiStavku(int iDStavke, string nazivStavke, int kolicinaStavke, decimal cijenaStavke)
+        public void KreiraiStavku(int iDst, string nzStavke, int kolStavke, decimal ciStavke)
         {
-            IDStavke = iDStavke;
-            NazivStavke = nazivStavke;
-            KolicinaStavke = kolicinaStavke;
-            CijenaStavke = cijenaStavke;
+            IDStavke = iDst;
+            NazivStavke = nzStavke;
+            KolicinaStavke = kolStavke;
+            CijenaStavke = ciStavke;
         }
 
 

@@ -9,12 +9,12 @@ namespace zadatak20221219
         private string Adresa;
         private string Telefon;
 
-        public Kupac(int IDKupca, string ImePrezime, string Adresa, string Telefon)
+        public Kupac(int iDKupca, string imePrezime, string adresa, string telefon)
         {
-            this.IDKupca = IDKupca;
-            this.ImePrezime = ImePrezime;
-            this.Adresa = Adresa;
-            this.Telefon = Telefon;
+            this.IDKupca = iDKupca;
+            this.ImePrezime = imePrezime;
+            this.Adresa = adresa;
+            this.Telefon = telefon;
         }
 
         public int IDKupca1 { get => IDKupca; set => IDKupca = value; }

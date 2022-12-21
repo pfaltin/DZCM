@@ -26,18 +26,20 @@ namespace zadatak20221219
         public Kupac Kupac { get; internal set; }
 
         StavkaNarudzbe stavkaNarudzbe = new StavkaNarudzbe();
-        private List<StavkaNarudzbe> listaStavkeNarudzbe = new List<StavkaNarudzbe>();
+        private List<StavkaNarudzbe> listaStavkiNarudzbe = new List<StavkaNarudzbe>();
 
 
         internal void IspisNarudzbe()
-
         {
-            Console.WriteLine("kupac: "+ Kupac.ImePrezime1);
-            Console.WriteLine("ID narudzbe:"+ OrderNo);
-            Console.WriteLine("datum: " + orderDate.ToString());
-            Console.WriteLine("stavke narudzbe:");
+            Console.WriteLine("*-------------------------------------------------------*");
 
-            foreach(StavkaNarudzbe stavkaListeNarudzbe in listaStavkeNarudzbe)
+            Console.WriteLine("kupac: "+ Kupac.ImePrezime1);
+            Console.Write("ID narudzbe:"+ OrderNo);
+            Console.WriteLine("\t\tdatum: " + orderDate.ToString());
+            Console.WriteLine("*-------------------------------------------------------*");
+            Console.WriteLine("\t\tstavke narudzbe:");
+            Console.WriteLine("*-------------------------------------------------------*");
+            foreach (StavkaNarudzbe stavkaListeNarudzbe in listaStavkiNarudzbe)
             {
                 Console.Write(stavkaListeNarudzbe.IDStavke1);
                 Console.Write("\t");
@@ -49,6 +51,7 @@ namespace zadatak20221219
                 Console.Write("\n");
                 
             }
+            Console.WriteLine("*-------------------------------------------------------*");
 
         }
 
@@ -56,7 +59,7 @@ namespace zadatak20221219
         {
             
             stavkaNarudzbe.KreiraiStavku(id, naziv, koicina, cijena);
-            listaStavkeNarudzbe.Add(stavkaNarudzbe);
+            listaStavkiNarudzbe.Add(stavkaNarudzbe);
 
         }
     }
