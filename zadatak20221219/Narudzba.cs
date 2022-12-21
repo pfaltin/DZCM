@@ -10,6 +10,7 @@
 	Ukupno(decimal, public) 
 	IspisNarudzbe(void, public) 
 */
+using System.Linq;
 using zadatak20221219;
 namespace zadatak20221219
 {
@@ -26,7 +27,7 @@ namespace zadatak20221219
         public Kupac Kupac { get; internal set; }
 
         StavkaNarudzbe stavkaNarudzbe = new StavkaNarudzbe();
-        private List<StavkaNarudzbe> listaStavkiNarudzbe = new List<StavkaNarudzbe>();
+        public List<StavkaNarudzbe> listaStavkiNarudzbe = new List<StavkaNarudzbe>();
 
 
         internal void IspisNarudzbe()
@@ -49,17 +50,27 @@ namespace zadatak20221219
                 Console.Write("\t");
                 Console.Write(stavkaListeNarudzbe.CijenaStavke1);
                 Console.Write("\n");
-                
-            }
+
+            };
             Console.WriteLine("*-------------------------------------------------------*");
 
         }
 
         internal void KreirajStavkuNarudzbe(int id, string naziv,  int koicina, decimal cijena)
         {
-            
+            Console.WriteLine("*-----------------------DEBUG --------------------------------*");
             stavkaNarudzbe.KreiraiStavku(id, naziv, koicina, cijena);
+            Console.Write(stavkaNarudzbe.IDStavke1);
+            Console.Write("\t");
+            Console.Write(stavkaNarudzbe.NazivStavke1);
+            Console.Write("\t");
+            Console.Write(stavkaNarudzbe.KolicinaStavke1);
+            Console.Write("\t");
+            Console.Write(stavkaNarudzbe.CijenaStavke1);
+            Console.Write("\n");
+
             listaStavkiNarudzbe.Add(stavkaNarudzbe);
+
 
         }
     }

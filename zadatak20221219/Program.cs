@@ -12,7 +12,6 @@
             nova_narudzba.Kupac = mico;
             nova_narudzba.KreirajStavkuNarudzbe(111, "Banane", 3, 24.66M);
             nova_narudzba.KreirajStavkuNarudzbe(112, "Čokolada", 13, 224.66M);
-            nova_narudzba.IspisNarudzbe();
             nova_narudzba.KreirajStavkuNarudzbe(113, "Pivo", 23, 124.66M);
             nova_narudzba.IspisNarudzbe();
 
