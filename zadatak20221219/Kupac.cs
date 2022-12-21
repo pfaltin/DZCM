@@ -17,8 +17,12 @@ namespace zadatak20221219
             this.Telefon = Telefon;
         }
 
+        public int IDKupca1 { get => IDKupca; set => IDKupca = value; }
+        public string ImePrezime1 { get => ImePrezime; set => ImePrezime = value; }
+        public string Adresa1 { get => Adresa; set => Adresa = value; }
+        public string Telefon1 { get => Telefon; set => Telefon = value; }
 
-    void IspisPodatakaKupca() 
+        void IspisPodatakaKupca() 
         {
             Console.WriteLine("Kupac je :" );
             Console.WriteLine(ImePrezime); Console.WriteLine(Adresa); Console.WriteLine(Telefon);
