@@ -26,7 +26,7 @@ namespace zadatak20221219
         public DateTime orderDate { get; }
         public Kupac Kupac { get; internal set; }
 
-        StavkaNarudzbe stavkaNarudzbe = new StavkaNarudzbe();
+        public StavkaNarudzbe stavkaNarudzbe = new StavkaNarudzbe();
         public List<StavkaNarudzbe> listaStavkiNarudzbe = new List<StavkaNarudzbe>();
 
 
@@ -40,6 +40,7 @@ namespace zadatak20221219
             Console.WriteLine("*-------------------------------------------------------*");
             Console.WriteLine("\t\tstavke narudzbe:");
             Console.WriteLine("*-------------------------------------------------------*");
+
             foreach (StavkaNarudzbe stavkaListeNarudzbe in listaStavkiNarudzbe)
             {
                 Console.Write(stavkaListeNarudzbe.IDStavke1);
@@ -53,12 +54,29 @@ namespace zadatak20221219
 
             };
             Console.WriteLine("*-------------------------------------------------------*");
+            Console.WriteLine("*----------------------for petlja-----------------------*");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("*---------inside for loop-----------* "+ i);
+                Console.Write(listaStavkiNarudzbe[i].IDStavke1);
+                Console.Write("\t");
+                Console.Write(listaStavkiNarudzbe[i].NazivStavke1);
+                Console.Write("\t");
+                Console.Write(listaStavkiNarudzbe[i].KolicinaStavke1);
+                Console.Write("\t");
+                Console.Write(listaStavkiNarudzbe[i].CijenaStavke1);
+                Console.Write("\n");
+
+            };
+            Console.WriteLine("*-------------------------------------------------------*");
+
+
 
         }
 
         internal void KreirajStavkuNarudzbe(int id, string naziv,  int koicina, decimal cijena)
         {
-            Console.WriteLine("*-----------------------DEBUG --------------------------------*");
+            Console.WriteLine("*-----------------------DEBUG -----------KreiraiStavku--------*");
             stavkaNarudzbe.KreiraiStavku(id, naziv, koicina, cijena);
             Console.Write(stavkaNarudzbe.IDStavke1);
             Console.Write("\t");
